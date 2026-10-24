@@ -104,25 +104,68 @@ section h3 {
 }
 
 .participant-list {
-  padding-left: 20px;
+  list-style: none;
   color: #475467;
   font-size: 14px;
 }
 
-.participant-list li {
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
   padding: 2px 0;
+}
+
+.participant-item span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.participant-list li::marker {
-  color: #178078;
+.unregister-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #667085;
+}
+
+.unregister-button:hover {
+  border-color: #f1c5c5;
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.unregister-button:focus-visible {
+  outline: 2px solid #176b65;
+  outline-offset: 2px;
+}
+
+.unregister-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.unregister-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .participant-list .participant-empty {
   color: #667085;
   font-style: italic;
-  list-style: none;
-  margin-left: -20px;
 }
 
 .form-group {
